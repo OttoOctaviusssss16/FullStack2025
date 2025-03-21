@@ -1,0 +1,43 @@
+p {
+    color:blue;
+}
+a{
+    text-decoration: none;
+}
+.importante{
+    color: red;
+    font-weight: bold;
+}
+#titulo{
+    text-align: center;
+    color: green;
+}
+
+h1, h2, nav {
+    background-color: gray;
+}
+div p {
+    border: 1px solid black;
+}
+section > p {
+    font-size: 18px;
+}
+h1 + p {
+    color:brown;
+}
+h1 ~ p {
+ margin-top: 20px;   
+}
+
+input[required]{
+    border: 2px solid red;
+}
+input:focus{
+    background-color: aquamarine;
+}
+a:hover {
+    color: chartreuse;
+}
+li:nth-child(2){
+    background-color: yellow;
+}
