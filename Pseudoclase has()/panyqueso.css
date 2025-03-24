@@ -7,3 +7,9 @@ h1:has(+ p){
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
+h5 {
+    font-style: none;
+}
+body{
+    background-color: rgb(3, 255, 255);
+}
