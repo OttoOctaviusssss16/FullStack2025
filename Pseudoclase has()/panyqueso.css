@@ -1,15 +1,12 @@
 h1 {
-    font-family: 'Courier New', Courier, monospace;
-    color:blue;
+    color:rgb(255, 187, 0);
 }
 h1:has(+ p){
-    color:red;
+    color:brown;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-h5 {
-    font-style: none;
-}
+
 body{
-    background-color: rgb(3, 255, 255);
+    background-color: rgb(45, 143, 38);
 }
