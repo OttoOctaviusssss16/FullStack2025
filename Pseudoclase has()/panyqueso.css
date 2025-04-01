@@ -1,5 +1,5 @@
 h1 {
-    color:rgb(255, 187, 0);
+    color:rgb(98, 72, 0);
 }
 h1:has(+ p){
     color:brown;
@@ -8,5 +8,5 @@ h1:has(+ p){
 }
 
 body{
-    background-color: rgb(45, 143, 38);
+    background-color: #b8bb87;
 }
