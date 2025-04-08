@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Documento</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var numerosecreto = Math.floor(Math.random()*100)+1;
+            var intentos = 5;
+            while (intentos > 0) {
+                var numeroingresado = (prompt("Ingrese un número entre 1 y 100 (Intentos restantes: " + intentos + ")"));
+                
+                if (numeroingresado == numerosecreto) {
+                    document.write("¡Acertaste!");
+                    break;
+                } else if (numeroingresado < numerosecreto) {
+                    alert("El número que ingresaste es menor al secreto");
+                } else {
+                    alert("El número que ingresaste es mayor al secreto");
+                }
+                intentos--;
+                if (intentos == 0) {
+                    document.write("Perdiste, el número secreto era: " + numerosecreto);
+                }
+            }
+        </script>
+    </body>
+</html>
