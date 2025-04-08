@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <title> Documento</title>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+    <form>
+        Numero 1<input id="num1" type="number"> <hr>
+        Numero 2<input id="num2" type="number"> <hr>
+        Resultado: <input id="resultado" type="number" read> <hr>
+        <button type="button" onclick="sumar()">Sumar</button>
+    </form>
+        <script>
+            function sumar(){
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+                num1 = parseInt(num1);
+                num2 = parseInt(num2);
+                var suma = num1 + num2;
+                document.getElementById("resultado").value = suma;
+            }
+        </script>
+    </body>
+</html>
