@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Actividad: Selectores de ID y Clases</title>
+</head>
+<body>
+<h1>Actividad: Manipulación de elementos</h1>
+<div id="informacion">
+<p id="mensaje-bienvenida">Bienvenido al ejercicio de selectores.</p>
+<p class="importante">Recuerda seguir las instrucciones cuidadosamente.</p>
+<p class="importante">Esta actividad te ayudará a dominar selectores en JavaScript.</p>
+</div>
+<div id="acciones">
+<button id="boton-principal">Haz clic aquí</button>
+<button class="boton-secundario">Prueba este botón</button>
+<button class="boton-secundario">Otro botón secundario</button>
+</div>
+<footer id="pie-pagina">
+<p class="copyright">© 2025 Actividad de Selectores. Todos los derechos reservados.</p>
+<p class="contacto">Contacto: example@correo.com</p>
+</footer>
+<script>
+    var elementoBienvenida = document.getElementById("mensaje-bienvenida");
+    elementoBienvenida.innerHTML = "¡Vamos a aprender selectores en JavaScript!";
+    var divAcciones = document.getElementById("acciones");
+    divAcciones.style.backgroundColor = "yellow";
+    var botonessecundarios = document.getElementsByClassName("boton-secundario");
+    botonessecundarios[0].innerHTML = "¡Soy un botón secundario!";
+    botonessecundarios[1].innerHTML = "¡Soy un botón secundario!";
+    var elementoCopyright = document.getElementsByClassName("copyright");
+    elementoCopyright[0].style.fontSize= "30px";
+</script>
+</body>
+</html>
