@@ -31,6 +31,15 @@
     botonessecundarios[1].innerHTML = "¡Soy un botón secundario!";
     var elementoCopyright = document.getElementsByClassName("copyright");
     elementoCopyright[0].style.fontSize= "30px";
+    var parrafo = document.getElementsByTagName("p");
+    for (var i = 0; i < parrafo.length; i++) {
+        if (i%2==0){
+            parrafo[i].style.color = "red";
+        }else{
+            parrafo[i].style.color = "green";
+        }
+
+    }
 </script>
 </body>
 </html>
