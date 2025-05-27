@@ -54,7 +54,6 @@ echo   "<table border='1'>
 foreach($estudiantes as $estudiante){
     echo "<tr>";
     echo "<td>".$estudiante["Nombre"]. "</td>".
-         "<td>".$estudiante["Edad"]. "</td>".
          "<td>".$estudiante["Calificacion"];"</td>";
 }
 echo "</table>"
