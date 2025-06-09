@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/Proyecto Php/Estilos/EstiloLogin.css">
 </head>
 <body>
     <form action="" method="post">
-        <label>Marca</label><input type="text" name="marca">
+        <label class="login_label">Marca</label><input type="text" name="marca">
         <br>
-        <label>Modelo</label><input type="text" name="modelo">
+        <label class="login_label">Modelo</label><input type="text" name="modelo">
         <br>
-        <label>Color</label><input type="text" name="color">
+        <label class="login_label">Color</label><input type="text" name="color">
         <br>
-        <label>Numero de Puertas</label><input type="text" name="numPuerta">
+        <label class="login_label">Numero de Puertas</label><input type="text" name="numPuerta">
         <br>
-        <label>Cantidad de Ruedas</label><input type="text" name="totalRuedas">
+        <label class="login_label">Cantidad de Ruedas</label><input type="text" name="totalRuedas">
         <br>
-        <label>Foto</label><input type="file" name="foto">
+        <label class="login_label">Foto</label><input type="file" name="foto">
         <br>
         <input type="submit" name="agregar">
     </form>
+
 </body>
 </html>
 
