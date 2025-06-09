@@ -2,11 +2,46 @@
 
 .login_label {
     font-family: 'Gabarito', sans-serif;
-    font-size: 16px;
+    font-size: 32px;
 }
 .form_login_registro {
-display: block;
-justify-content: center;
-align-items: center;
+    display: flex;
+    position: absolute;
+    height: 50vh;
+    width: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    flex-direction: column;
+    border: 5px solid #000;
+    background-color: transparent;
+    background-image: url(https://img.freepik.com/vector-gratis/fondo-diseno-patron-organico-abstracto_1048-19286.jpg?semt=ais_items_boosted&w=740);
 }
+body {
+    margin: 0px;
+    background-size: cover;
+    background-image: url(https://www.astonmartin.com/-/media/new-model-page-design---models/all_models_imagery-for-new-component/vantage/vantage_main.jpg?mw=1920&rev=-1&hash=1C8658829A069AB6727233866926CC08);
+}
+.botonestandar {
+    background-color: aquamarine;
+    font-family: 'Gabarito', sans-serif;
+    font-size: 16px;
+    width: auto;
+    height: 10vh;
+    
+}
+.ingresotexto {
+    background-color: aliceblue;
+    font-family: 'Courier New', sans-serif;
+    font-size: 16px;
+    height: 10vh;
+    width: auto;
+}
+header {
+    height: 10vh;
+    width: 100%;
+    background-color: antiquewhite;
+    opacity: 50%;
+}
+
 
