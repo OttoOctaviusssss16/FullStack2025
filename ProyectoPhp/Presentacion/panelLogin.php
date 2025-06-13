@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Login</title>
+    <title>Login - Concesionario</title>
     <link rel="stylesheet" href="../Estilos/EstiloLogin.css">
 </head>
 <body>
-        <header>Hola</header>
-        <form class="form_login_registro" action="" method="post">
+        <header><h1>Concesionaria Scabino Cabral</h1></header>
+         <h1 class="h1registro">Iniciar Sesion </h1>
+        <form class="form_login" action="" method="post">
         <label class="login_label">Email</label><input type="text" name="email" placeholder="Ingrese su Email" class="ingresotexto">
         <br>
         <label class="login_label">Contraseña</label><input type="password" name="contraseña" placeholder="Ingrese su contraseña" class="ingresotexto">
         <br>
         <input type="submit" name="login" value="Iniciar Sesión" class="botonestandar">
+        <br>
         <input type="submit" name="register" value="Registro" class="botonestandar">
+        <br>
     </form>
 </body>
 </html>
@@ -36,20 +39,26 @@ $usuario2->setEdad(18);
 $usuario2->setDireccion("Peru");
 $usuario2->setEmail("peru@peruano.com");
 $usuario2->setContraseña("peruano");
+$usuario2->setTipo("admin");
 $clientes=[$usuario1, $usuario2];
+$encontrado=false;
 if(isset($_POST['login'])){
-if ($usuario1->getEmail() == $_POST['email'] && $usuario1->getContraseña()== $_POST['contraseña'] ){
-        if ($usuario1->getTipo() == "admin"){
-        header("Location:panelAdmin.php");
-    }else{
-    header("Location:index.php");
-}
-}else{
-    echo "
-    <script>
-    alert('Usuario o Contraseña Incorrectos');
-    </script>";
-}}
+foreach ($clientes as $cliente) {
+    if ($cliente->getEmail()==$_POST['email'] && $cliente->getContraseña()==$_POST['contraseña']){
+        $encontrado=true;
+        if($cliente->getTipo()=="admin"){
+            header("Location:panelAdmin.php");
+        }else{
+            header("Location:../index.php");
+        }
+        }
+    }
+    if(!$encontrado){
+            echo "<script>
+            alert('Usuario o Contraseña Incorrecto');
+            </script>"; 
+        }
+    }
 if(isset($_POST['register'])){
 header("Location:panelRegistro.php");
 }

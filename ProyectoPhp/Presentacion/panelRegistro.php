@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro - Concesionaria</title>
+    <link rel="stylesheet" href="../Estilos/EstiloLogin.css">
 </head>
 <body>
-    <form action="" method="post">
-        <label>Nombre</label><input type="text" name="cliente">
+    <header><h1>Concesionaria Scabino Cabral</h1></header>
+    <h1 class="h1registro"> Registro </h1> 
+    <form class="form_registro" action="" method="post">
+        <label class="registro_label">Nombre</label><input type="text" name="cliente" class="ingresotexto">
         <br>
-        <label>Telefono</label><input type="text" name="telefono">
+        <label class="registro_label">Telefono</label><input type="text" name="telefono" class="ingresotexto">
         <br>
-        <label>Edad</label><input type="text" name="edad">
+        <label class="registro_label">Edad</label><input type="text" name="edad" class="ingresotexto">
         <br>
-        <label>Direccion</label><input type="text" name="direccion">
+        <label class="registro_label">Direccion</label><input type="text" name="direccion" class="ingresotexto">
         <br>
-        <label>Email</label><input type="text" name="email">
+        <label class="registro_label">Email</label><input type="text" name="email" class="ingresotexto">
         <br>
-        <label>Contraseña</label><input type="password" name="contraseña">
+        <label class="registro_label">Contraseña</label><input type="password" name="contraseña" class="ingresotexto">
         <br>
-        <input type="submit" name="register" value="Registrarse">
+        <input type="submit" name="register" value="Registrarse" class="botonestandar">
     </form>
 </body>
 </html>

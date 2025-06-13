@@ -1,5 +1,6 @@
 <?php
     class vehiculo {
+    private $nombre;
     private $marca;
     private $modelo;
     private $color;
@@ -21,7 +22,7 @@
         return $this->modelo;
     }
     //Color
-        public function setColor($color){
+    public function setColor($color){
         return $this->color=$color;
     }
     public function getColor(){
@@ -47,6 +48,12 @@
     }
     public function getFoto(){
         return $this->foto;
+    }
+    public function getNombre() {
+      return $this->nombre;
+    }
+    public function setNombre($nombre) {
+      $this->nombre = $nombre;
     }
 }
     ?>
