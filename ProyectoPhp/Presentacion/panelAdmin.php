@@ -1,3 +1,8 @@
+<?php
+include_once "../Logica/vehiculo.php";
+include_once "../Logica/cliente.php";
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +32,6 @@
 </html>
 
 <?php
-include_once "../Logica/vehiculo.php";
 if(isset($_POST['agregar'])){
 $vehiculo = new vehiculo();
 $vehiculo->setMarca($_POST['marca']);
@@ -50,5 +54,29 @@ echo "<table border=1>
         <td>".$vehiculo->getPuertas()."</td>
         <td>".$vehiculo->getRuedas()."</td>
         </table>";
+}
+if(isset($_SESSION['Usuarios'])){
+echo "<table>
+      <tr>    
+      <th>Nombre</th>
+      <th>Telefono</th>
+      <th>Edad</th>
+      <th>Direccion</th>
+      <th>Email</th>
+      <th>Contraseña</th>
+      </tr>";
+      foreach($_SESSION['Usuarios'] as $usuario){  
+     echo  "<tr>
+      <td>".$usuario->getNombre()."</td>
+      <td>".$usuario->getTelefono()."</td>
+      <td>".$usuario->getEdad()."</td>
+      <td>".$usuario->getDireccion()."</td>
+      <td>".$usuario->getEmail()."</td>
+      <td>".$usuario->getTipo()."</td>
+      </tr>
+     
+    ";
+      }
+     echo  " </table>";
 }
 ?>

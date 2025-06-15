@@ -23,30 +23,13 @@
 </html>
 <?php
 include_once "../Logica/cliente.php";
-//Cliente 1
-$usuario1= new cliente();
-$usuario1->setNombre("Juan");
-$usuario1->setTelefono("099123456");
-$usuario1->setEdad(17);
-$usuario1->setDireccion("Bolivia");
-$usuario1->setEmail("boliviano@bolivia.com");
-$usuario1->setContraseña("Nacional1974");
-//Cliente 2
-$usuario2= new cliente();
-$usuario2->setNombre("Octavio");
-$usuario2->setTelefono("099234567");
-$usuario2->setEdad(18);
-$usuario2->setDireccion("Peru");
-$usuario2->setEmail("peru@peruano.com");
-$usuario2->setContraseña("peruano");
-$usuario2->setTipo("admin");
-$clientes=[$usuario1, $usuario2];
+$usuarios=[];
 $encontrado=false;
 if(isset($_POST['login'])){
-foreach ($clientes as $cliente) {
-    if ($cliente->getEmail()==$_POST['email'] && $cliente->getContraseña()==$_POST['contraseña']){
+foreach ($usuarios as $usuario) {
+    if ($usuario->getEmail()==$_POST['email'] && $usuario->getContraseña()==$_POST['contraseña']){
         $encontrado=true;
-        if($cliente->getTipo()=="admin"){
+        if($usuario->getTipo()=="admin"){
             header("Location:panelAdmin.php");
         }else{
             header("Location:../index.php");
