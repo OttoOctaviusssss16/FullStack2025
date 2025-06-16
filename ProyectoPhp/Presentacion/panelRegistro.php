@@ -39,5 +39,7 @@ $usuario->setEdad($_POST['edad']);
 $usuario->setDireccion($_POST['direccion']);
 $usuario->setEmail($_POST['email']);
 $usuario->setContraseña($_POST['contraseña']);
+$usuario->setTipo("cliente");
 $_SESSION['Usuarios'][]=$usuario;
+header("Location: panelLogin.php");
 }

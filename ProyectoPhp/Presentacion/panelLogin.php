@@ -23,10 +23,10 @@
 </html>
 <?php
 include_once "../Logica/cliente.php";
-$usuarios=[];
+session_start();
 $encontrado=false;
 if(isset($_POST['login'])){
-foreach ($usuarios as $usuario) {
+foreach ($_SESSION['Usuarios'] as $usuario) {
     if ($usuario->getEmail()==$_POST['email'] && $usuario->getContraseña()==$_POST['contraseña']){
         $encontrado=true;
         if($usuario->getTipo()=="admin"){
