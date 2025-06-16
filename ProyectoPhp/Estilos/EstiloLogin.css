@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap');
 .login_label {
-    font-family: 'Gabarito', sans-serif;
+    font-family: 'Victor Mono', monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 32px;
     color: #fff;
-     text-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 10px black;
 }
 .form_login {
     display: flex;
@@ -51,7 +53,8 @@ header {
 }
 h1{
     margin: 0;
-    font-family: 'Gabarito', sans-serif;
+    font-family: 'Victor Mono', monospace;
+    font-style: italic;
     font-size: 30px;
     text-align: center;
     color: black;

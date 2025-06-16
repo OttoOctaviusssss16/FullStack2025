@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="index.php"><b>Concesionaria Scabino Cabral</b></li>
                 <li><a class="botonesbarra" href="Presentacion/panelLogin.php">Login</a></li>
-                <li><a class="botonesbarra" href="Presentacion/contacto.php">Contacto</a></li>
+                <li><a class="botonesbarra" href="Presentacion/panelContacto.php">Contacto</a></li>
             </ul>
     </header>
 </body>
