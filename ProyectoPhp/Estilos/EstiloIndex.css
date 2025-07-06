@@ -39,7 +39,11 @@ nav a {
 
 .contenedor {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 .contenido{
     display:inline-block;

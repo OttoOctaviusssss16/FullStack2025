@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
 .login_label {
     font-family: 'Victor Mono', monospace;
-    font-weight: 24px;
+    font-size: 15px;
     color: #fff;
     text-shadow: 0px 0px 10px black;
 }

@@ -19,37 +19,48 @@
 </html>
 <?php
 include_once "Logica/vehiculo.php";
+session_start();
 //Vehiculo 1
-$vehiculo1= new vehiculo();
-$vehiculo1->setNombre("Volkswagen Saveiro");
-$vehiculo1->setMarca("Volkswagen");
-$vehiculo1->setModelo("Saveiro");
-$vehiculo1->setColor("Blanco");
-$vehiculo1->setFoto("VolkswagenSaveiro.jpg");
+if (!isset($_SESSION['vehiculo'])){
+$vehiculos1= new vehiculo();
+$vehiculos1->setNombre("Volkswagen Saveiro");
+$vehiculos1->setMarca("Volkswagen");
+$vehiculos1->setModelo("Saveiro");
+$vehiculos1->setColor("Blanco");
+$vehiculos1->setAño("2018");
+$vehiculos1->setFoto("VolkswagenSaveiro.jpg");
+$_SESSION['vehiculo'][]=$vehiculos1;
 //Vehiculo 2
-$vehiculo2= new vehiculo();
-$vehiculo2->setNombre("Mercedes Atego");
-$vehiculo2->setMarca("Mercedes");
-$vehiculo2->setModelo("Atego");
-$vehiculo2->setColor("Blanco");
-$vehiculo2->setFoto("MercedesAtego2.jpg");
+$vehiculos2= new vehiculo();
+$vehiculos2->setNombre("Mercedes Atego");
+$vehiculos2->setMarca("Mercedes");
+$vehiculos2->setModelo("Atego");
+$vehiculos2->setColor("Blanco");
+$vehiculos2->setAño("2024");
+$vehiculos2->setFoto("MercedesAtego2.jpg");
+$_SESSION['vehiculo'][]=$vehiculos2;
 //Vehiculo 3
-$vehiculo3= new vehiculo();
-$vehiculo3->setNombre("Ferrari 458 Italia");
-$vehiculo3->setMarca("Ferrari");
-$vehiculo3->setModelo("458 Italia");
-$vehiculo3->setColor("Rojo");
-$vehiculo3->setFoto("Ferrari 458 Italia.jpg");
-
-$vehiculos=[$vehiculo1, $vehiculo2, $vehiculo3];
-echo "<div class='contenedor'>";
-foreach ($vehiculos as $vehiculo){
-    echo  "<div class='contenido'>  
-            <img src='Fotos/". $vehiculo->getFoto()."'>
-            <h1>- ". $vehiculo->getNombre(). "</h1>
-            <h4>- Marca: ". $vehiculo->getMarca(). "</h4>
-            <h4>- Modelo: ". $vehiculo->getModelo()."</h4>
-            <h4>- Color: ". $vehiculo->getColor()."</h4>
-            </div>";
+$vehiculos3= new vehiculo();
+$vehiculos3->setNombre("Ferrari 458 Italia");
+$vehiculos3->setMarca("Ferrari");
+$vehiculos3->setModelo("458 Italia");
+$vehiculos3->setColor("Rojo");
+$vehiculos3->setAño("2013");
+$vehiculos3->setFoto("Ferrari 458 Italia.jpg");
+$_SESSION['vehiculo'][]=$vehiculos3;
 }
-echo "</div>";
+if(isset($_SESSION['vehiculo']) && !empty($_SESSION['vehiculo'])){
+   echo "<div class='contenedor'>";
+   foreach ($_SESSION['vehiculo'] as $vehiculo) {
+       echo "<div class='contenido'>  
+               <img src='Fotos/". $vehiculo->getFoto()."'>
+               <h1>- ". $vehiculo->getNombre(). "</h1>
+               <h4>- Marca: ". $vehiculo->getMarca(). "</h4>
+               <h4>- Modelo: ". $vehiculo->getModelo()."</h4>
+               <h4>- Color: ". $vehiculo->getColor()."</h4>
+               <h4>- Año: ". $vehiculo->getAño()."</h4>
+               </div>";
+   }
+   echo "</div>";
+}
+?>

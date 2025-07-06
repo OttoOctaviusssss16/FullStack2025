@@ -4,8 +4,7 @@
     private $marca;
     private $modelo;
     private $color;
-    private $cantidaddepuertas;
-    private $cantidadderuedas;
+    private $año;
     private $foto;
     //Marca
     public function setMarca($marca){
@@ -28,19 +27,12 @@
     public function getColor(){
         return $this->color;
     }
-    //Cantidad de Puertas
-    public function setPuertas($cantidaddepuertas){
-        return $this->cantidaddepuertas=$cantidaddepuertas;
+    //Año
+    public function setAño($año){
+        return $this->año=$año;
     }
-    public function getPuertas(){
-        return $this->cantidaddepuertas;
-    }
-    //Cantidad de Ruedas
-    public function setRuedas($cantidadderuedas){
-        return $this->cantidadderuedas=$cantidadderuedas;
-    }
-    public function getRuedas(){
-        return $this->cantidadderuedas;
+    public function getAño(){
+        return $this->año;
     }
     //Foto
     public function setFoto($foto){
@@ -53,7 +45,7 @@
       return $this->nombre;
     }
     public function setNombre($nombre) {
-      $this->nombre = $nombre;
+      $this->nombre = $nombre;  
     }
 }
     ?>

@@ -10,9 +10,9 @@
         <header><h1>Concesionaria Scabino Cabral</h1></header>
          <h1 class="h1registro">Iniciar Sesion </h1>
         <form class="form_login" action="" method="post">
-        <label class="login_label">Email</label><input type="text" name="email" placeholder="Ingrese su Email" class="ingresotexto">
+        <label class="login_label"><b>Email</b></label><input type="text" name="email" placeholder="Ingrese su Email" class="ingresotexto">
         <br>
-        <label class="login_label">Contraseña</label><input type="password" name="contraseña" placeholder="Ingrese su contraseña" class="ingresotexto">
+        <label class="login_label"><b>Contraseña</b></label><input type="password" name="contraseña" placeholder="Ingrese su contraseña" class="ingresotexto">
         <br>
         <input type="submit" name="login" value="Iniciar Sesión" class="botonestandar">
         <br>
