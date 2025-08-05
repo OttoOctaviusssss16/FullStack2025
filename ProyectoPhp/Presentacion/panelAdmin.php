@@ -2,6 +2,12 @@
 include_once "../Logica/vehiculo.php";
 include_once "../Logica/cliente.php";
 include_once "agregarImagen.php";
+session_start();
+if(isset($_SESSION['Usuarios'])) {
+    if($_SESSION['Usuarios']->getTipo() == "cliente") {
+        header("Location: ../index.php");
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +38,6 @@ include_once "agregarImagen.php";
 </html>
 
 <?php
-session_start();
 if(isset($_POST['limpiar_sesion'])){
     session_destroy();
 }

@@ -7,6 +7,7 @@ class cliente {
     private $email;
     private $contraseña;
     private $tipo;
+    private $ci;
 
 
 //Nombre
@@ -58,4 +59,17 @@ class cliente {
     public function setTipo($tipo) {
       $this->tipo = $tipo;
     }
+
+    public function getCi() {
+      return $this->ci;
+    }
+    public function setCi($ci) {
+      $this->ci = $ci;
+    }
+public function Login(){
+    include_once "../Persistencia/UsuarioBD.php";
+    $usuarioBD = new UsuarioBD();
+    return $usuarioBD->Login($this->email, $this->contraseña);
 }
+}
+

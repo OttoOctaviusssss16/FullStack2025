@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,26 +27,18 @@
 </html>
 <?php
 include_once "../Logica/cliente.php";
-session_start();
-$encontrado=false;
+
 if(isset($_POST['login'])){
-foreach ($_SESSION['Usuarios'] as $usuario) {
-    if ($usuario->getEmail()==$_POST['email'] && $usuario->getContraseña()==$_POST['contraseña']){
-        $encontrado=true;
-        if($usuario->getTipo()=="admin"){
-            header("Location:panelAdmin.php");
-        }else{
-            header("Location:../index.php");
-        }
-        }
+    $usuario = new cliente();
+    $usuario->setEmail($_POST['email']);
+    $usuario->setContraseña($_POST['contraseña']);
+    $u=$usuario->Login();
+if($u != null){
+    $_SESSION['Usuarios'] = $u;
+    if($u->getTipo()=="admin"){
+        header("Location:panelAdmin.php");
+    }else{
+        header("Location: ../index.php");
     }
-    if(!$encontrado){
-            echo "<script>
-            alert('Usuario o Contraseña Incorrecto');
-            </script>"; 
-        }
-    }
-if(isset($_POST['register'])){
-header("Location:panelRegistro.php");
 }
-?>
+}
