@@ -71,5 +71,11 @@ public function Login(){
     $usuarioBD = new UsuarioBD();
     return $usuarioBD->Login($this->email, $this->contraseña);
 }
+
+public function RegistrarUsuario() {
+  include_once "../Persistencia/UsuarioBD.php";
+  $usuarioBD = new UsuarioBD();
+  $usuarioBD->RegistrarUsuario($this->ci, $this->nombre, $this->email, $this->telefono, $this->contraseña, $this->direccion, $this->tipo);
+}
 }
 

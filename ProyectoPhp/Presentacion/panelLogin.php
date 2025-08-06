@@ -27,7 +27,6 @@ session_start();
 </html>
 <?php
 include_once "../Logica/cliente.php";
-
 if(isset($_POST['login'])){
     $usuario = new cliente();
     $usuario->setEmail($_POST['email']);
@@ -41,4 +40,7 @@ if($u != null){
         header("Location: ../index.php");
     }
 }
+}
+if(isset($_POST['register'])) {
+        header("Location:panelRegistro.php");
 }
