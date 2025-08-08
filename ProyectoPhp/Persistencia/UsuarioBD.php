@@ -32,15 +32,29 @@ class UsuarioBD extends conexion
     }
     public function RegistrarUsuario($ci, $nombre, $correo, $telefono, $contraseña, $direccion, $tipo)
     {
+        try {
             $conexion = $this->getConexion();
             $sql = "Insert into usuarios values (?,?,?,?,?,?,?)";
             $stmt = $conexion->prepare($sql);
-            if (!$stmt) {
-                return false;
-            }
             $stmt->bind_param("issssss", $ci, $nombre, $correo, $telefono, $contraseña, $direccion, $tipo);
             $stmt->execute();
+        } catch (mysqli_sql_exception $e) {
+            switch ($e->getCode()) {
+                case 1062:
+                    echo "<script>
+                            alert('La cédula que ingresaste ya existe');
+                            </script>";
+                    exit;
+                case 1064:
+                    echo "<script>
+                            alert('No se cargó correctamente la consulta');
+                            </script>";
+                default:
+                    echo "<script>
+                        alert('Error en la página de registro. Intente nuevamente');
+                            </script>" ;
+                    exit;
+            }
+        }
     }
 }
-    
-

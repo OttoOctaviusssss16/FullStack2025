@@ -77,5 +77,11 @@ public function RegistrarUsuario() {
   $usuarioBD = new UsuarioBD();
   $usuarioBD->RegistrarUsuario($this->ci, $this->nombre, $this->email, $this->telefono, $this->contraseña, $this->direccion, $this->tipo);
 }
+
+public function ChequeoCedula() {
+  include_once "../Persistencia/UsuarioBD.php";
+  $usuarioBD = new UsuarioBD();
+  $usuarioBD->ChequeoCedula($this->ci);
+}
 }
 
